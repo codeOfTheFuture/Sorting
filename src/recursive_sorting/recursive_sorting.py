@@ -8,11 +8,24 @@ def merge( arrA, arrB ):
 
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
+
 def merge_sort( arr ):
     # TO-DO
+    if len(arr) > 1:
+        middle = len(arr) // 2
+        left = arr[:middle]
+        right = arr[middle:]
+
+        print(left, right)
+        merge_sort(left)
+        merge_sort(right)
+
 
     return arr
 
+my_arr = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+
+print(merge_sort(my_arr))
 
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
